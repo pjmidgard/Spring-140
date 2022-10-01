@@ -222,7 +222,6 @@ class encypthion_class:
                                         else:
                                             
                                             res+="0"
-                                 
                                             res+="1"*(upper.index(string[i])+1)
                                  
                                 info_hex=res
