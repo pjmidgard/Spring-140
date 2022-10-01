@@ -273,6 +273,7 @@ class encypthion_class:
                                             else:
                                                 res+="1"
                                             res+=b
+                                            res1='"'
                                  
                                 info_hex=res
 
