@@ -206,10 +206,23 @@ class encypthion_class:
                                         if(string[i] in lower):
                                  
                                             res+="1"*(lower.index(string[i])+1)
-                                            res+="0"
+                                            
+                                            res1+="0"*(lower.index(string[i])+1)
+                                            
+                                            long_res=len(res)
+                                            res=res[:long_res-1]
+                                            if len(res1)==1:
+                                                res+="10"
+                                            else:
+                                                res+="0"
+                                                
+                                            res1=""
+                                            
+                                            
                                             
                                  
                                         else:
+                                            
                                  
                                             #res+="0"*(upper.index(string[i])+1)
                                             res1+="0"*(upper.index(string[i])+1)
@@ -219,18 +232,31 @@ class encypthion_class:
                                             b=format(long_res,'03b')
                                             res+=b
                                             res1=""
+                                            
                                  
                                     else:
                                  
                                         if(string[i] in lower):
-                                            
-                                          
+                                 
                                             res+="1"*(lower.index(string[i])+1)
-                                         
-                                            res+="0"
+                                            
+                                            res1+="0"*(lower.index(string[i])+1)
+                                            
+                                            long_res=len(res)
+                                            res=res[:long_res-1]
+                                            if len(res1)==1:
+                                                res+="10"
+                                            else:
+                                                res+="0"
+                                                
+                                            res1=""
+                                            
+                                            
+                                            
                                  
                                         else:
                                             
+                                 
                                             #res+="0"*(upper.index(string[i])+1)
                                             res1+="0"*(upper.index(string[i])+1)
                                             res+="1"
