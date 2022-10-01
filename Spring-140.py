@@ -214,8 +214,9 @@ class encypthion_class:
                                             #res+="0"*(upper.index(string[i])+1)
                                                                                                                                          res1+="0"*(upper.index(string[i])+1)
                                                                                                                                          res+="1"
-                                                                                                                                       
-                                                                                                                                         b=format(len(res1),'03b')
+                                                                                                                                         long_res=len(res1)
+                                                                                                                                         long_res=long_res-1
+                                                                                                                                         b=format(long_res,'03b')
                                                                                                                                          res+=b
                                                                                                                                          res1=""
                                  
@@ -233,7 +234,9 @@ class encypthion_class:
                                             
                                                                                                                                          res1+="0"*(upper.index(string[i])+1)
                                                                                                                                          res+="1"
-                                                                                                                                         b=format(len(res1),'03b')
+                                                                                                                                         long_res=len(res1)
+                                                                                                                                         long_res=long_res-1
+                                                                                                                                         b=format(long_res,'03b')
                                                                                                                                          res+=b
                                                                                                                                          res1=""
                                  
