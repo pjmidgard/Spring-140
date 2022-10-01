@@ -267,11 +267,12 @@ class encypthion_class:
                                             long_res=len(res1)
                                             long_res=long_res-1
                                             b=format(long_res,'03b')
-                                            res+=b
+                                            
                                             if b=="000":
                                                 res+="0" 
                                             else:
                                                 res+="1"
+                                            res+=b
                                  
                                 info_hex=res
 
