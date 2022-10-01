@@ -215,13 +215,21 @@ class encypthion_class:
                                  
                                         if(string[i] in lower):
                                             
-                                            
-                                            res+="1"
+                                            long_res=len(res)
+                                            if res[long_res-1:long_res]=="0":
+                                                res+="1"
+                                                
+                                            if res[long_res-1:long_res]=="1":
+                                                res+="0" 
                                             res+="0"*(lower.index(string[i])+1)
                                  
                                         else:
                                             
-                                            res+="0"
+                                            long_res=len(res)
+                                            if res[long_res-1:long_res]=="1":
+                                                res+="0"
+                                            if res[long_res-1:long_res]=="0":
+                                                res+="1"
                                             res+="1"*(upper.index(string[i])+1)
                                  
                                 info_hex=res
