@@ -212,13 +212,13 @@ class encypthion_class:
                                         else:
                                  
                                             #res+="0"*(upper.index(string[i])+1)
-                                                                                                                                         res1+="0"*(upper.index(string[i])+1)
-                                                                                                                                         res+="1"
-                                                                                                                                         long_res=len(res1)
-                                                                                                                                         long_res=long_res-1
-                                                                                                                                         b=format(long_res,'03b')
-                                                                                                                                         res+=b
-                                                                                                                                         res1=""
+                                            res1+="0"*(upper.index(string[i])+1)
+                                            res+="1"
+                                            long_res=len(res1)
+                                            long_res=long_res-1
+                                            b=format(long_res,'03b')
+                                            res+=b
+                                            res1=""
                                  
                                     else:
                                  
@@ -231,14 +231,14 @@ class encypthion_class:
                                  
                                         else:
                                             
-                                            
-                                                                                                                                         res1+="0"*(upper.index(string[i])+1)
-                                                                                                                                         res+="1"
-                                                                                                                                         long_res=len(res1)
-                                                                                                                                         long_res=long_res-1
-                                                                                                                                         b=format(long_res,'03b')
-                                                                                                                                         res+=b
-                                                                                                                                         res1=""
+                                            #res+="0"*(upper.index(string[i])+1)
+                                            res1+="0"*(upper.index(string[i])+1)
+                                            res+="1"
+                                            long_res=len(res1)
+                                            long_res=long_res-1
+                                            b=format(long_res,'03b')
+                                            res+=b
+                                            res1=""
                                  
                                 info_hex=res
 
