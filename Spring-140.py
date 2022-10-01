@@ -193,12 +193,12 @@ class encypthion_class:
                                 
                                 #print(info_hex)
  
-                                lower="abcdef0123456789"
- 
-                                
+                                lower="abcdef01"
+                                upper="23456789"
  
                                 res=""
- 
+                                res1=""
+                               
                                 for i in range(0,len(string)):
  
                                     if(i%2==0):
@@ -206,22 +206,36 @@ class encypthion_class:
                                         if(string[i] in lower):
                                  
                                             res+="1"*(lower.index(string[i])+1)
+                                            res+="0"
+                                            
                                  
                                         else:
                                  
-                                            res+="0"*(upper.index(string[i])+1)
+                                            #res+="0"*(upper.index(string[i])+1)
+                                                                                                                                         res1+="0"*(upper.index(string[i])+1)
+                                                                                                                                         res+="1"
+                                                                                                                                       
+                                                                                                                                         b=format(len(res1),'03b')
+                                                                                                                                         res+=b
+                                                                                                                                         res1=""
                                  
                                     else:
                                  
                                         if(string[i] in lower):
                                             
                                           
-                                            res+="0"*(lower.index(string[i])+1)
+                                            res+="1"*(lower.index(string[i])+1)
+                                         
+                                            res+="0"
                                  
                                         else:
                                             
                                             
-                                            res+="1"*(upper.index(string[i])+1)
+                                                                                                                                         res1+="0"*(upper.index(string[i])+1)
+                                                                                                                                         res+="1"
+                                                                                                                                         b=format(len(res1),'03b')
+                                                                                                                                         res+=b
+                                                                                                                                         res1=""
                                  
                                 info_hex=res
 
