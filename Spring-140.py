@@ -193,9 +193,9 @@ class encypthion_class:
                                 
                                 #print(info_hex)
  
-                                lower="abcdef89"
+                                lower="abcdef0123456789"
  
-                                upper="01234567"
+                                
  
                                 res=""
  
@@ -215,21 +215,12 @@ class encypthion_class:
                                  
                                         if(string[i] in lower):
                                             
-                                            long_res=len(res)
-                                            if res[long_res-1:long_res]=="0":
-                                                res+="1"
-                                                
-                                            if res[long_res-1:long_res]=="1":
-                                                res+="0" 
+                                          
                                             res+="0"*(lower.index(string[i])+1)
                                  
                                         else:
                                             
-                                            long_res=len(res)
-                                            if res[long_res-1:long_res]=="1":
-                                                res+="0"
-                                            if res[long_res-1:long_res]=="0":
-                                                res+="1"
+                                            
                                             res+="1"*(upper.index(string[i])+1)
                                  
                                 info_hex=res
