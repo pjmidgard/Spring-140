@@ -214,10 +214,14 @@ class encypthion_class:
                                     else:
                                  
                                         if(string[i] in lower):
-                                 
+                                            
+                                            
+                                            res+="1"
                                             res+="0"*(lower.index(string[i])+1)
                                  
                                         else:
+                                            
+                                            res+="0"
                                  
                                             res+="1"*(upper.index(string[i])+1)
                                  
