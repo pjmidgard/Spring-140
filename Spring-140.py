@@ -227,6 +227,8 @@ class encypthion_class:
                                             long_res=len(res1)
                                             long_res=long_res-1
                                             b=format(long_res,'03b')
+                                            if long_res==8:
+                                                res+="11110"
                                             if long_res<4:
                                                 res+="0"
                                                 res+=b
@@ -258,6 +260,8 @@ class encypthion_class:
                                             long_res=len(res1)
                                             long_res=long_res-1
                                             b=format(long_res,'03b')
+                                            if long_res==8:
+                                                res+="11110"
                                             if long_res<4:
                                                 res+="0"
                                                 res+=b
