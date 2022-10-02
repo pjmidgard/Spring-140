@@ -54,6 +54,7 @@ class encypthion_class:
                     F=0
                     
                     
+
                     	 
                     nac=len(nameas)
                     
@@ -192,6 +193,39 @@ class encypthion_class:
                                 string = info_hex
                                 
                                 #print(info_hex)
+                                
+                                #011...
+                                #01
+                                #00xx
+                                #11xx
+                                #1110
+                                #11110...
+                                
+                                #011111111
+                                #01111111
+                                #0111111
+                                #011111
+                                #01111
+                                #0111
+                                #011
+                                #01
+                                #0000
+                                #0001
+                                #0010
+                                #0011
+                                #0100
+                                #0101
+                                #0110
+                                #0111
+                                #1000
+                                #1001
+                                #1010
+                                #1011
+                                #1100
+                                #1101
+                                #1110
+                                #11110
+                                
  
                                 lower="abcdef01"
                                 upper="23456789"
@@ -229,7 +263,7 @@ class encypthion_class:
                                             b=format(long_res,'03b')
                                             if long_res==8:
                                                 res+="11110"
-                                            if long_res<4:
+                                            elif long_res<4:
                                                 res+="0"
                                                 res+=b
                                             else:
@@ -262,7 +296,7 @@ class encypthion_class:
                                             b=format(long_res,'03b')
                                             if long_res==8:
                                                 res+="11110"
-                                            if long_res<4:
+                                            elif long_res<4:
                                                 res+="0"
                                                 res+=b
                                             else:
