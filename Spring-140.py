@@ -205,16 +205,17 @@ class encypthion_class:
                                 #110
                                 #10
                                 #0000
+                                #0001
                                 #0010
-                                #0100
-                                #0110
-                                #1001
-                                #1010
-                                #1011
-                                #1100
-                                #1101
-                                #1110
+                                #0011
+                                #01100
+                                #01101
+                                #01110
                                 #01111
+                               
+                                
+                                
+                               
                                 
                                 
                                 
@@ -253,15 +254,15 @@ class encypthion_class:
                                             
                                             long_res=long_res-1
                                             b=format(long_res,'03b')
-                                            if long_res==7:
-                                                res+="01111"
-                                            elif long_res<4:
-                                                res+=b 
+                                          
+                                            if long_res<4:
                                                 res+="0"
-                                            else:
+                                                res+=b 
                                                 
+                                            else:
+                                                res+="01"
                                                 res+=b
-                                                res+="1"
+                                               
                                             res1=""
                                             
                                  
@@ -283,19 +284,19 @@ class encypthion_class:
                                  
                                             #res+="0"*(upper.index(string[i])+1)          
                                             res1+="0"*(upper.index(string[i])+1)
-                                            
                                             long_res=len(res1)
+                                            
                                             long_res=long_res-1
                                             b=format(long_res,'03b')
-                                            if long_res==7:
-                                                res+="01111"
-                                            elif long_res<4:
-                                                res+=b 
+                                          
+                                            if long_res<4:
                                                 res+="0"
-                                            else:
+                                                res+=b 
                                                 
+                                            else:
+                                                res+="01"
                                                 res+=b
-                                                res+="1"
+                                               
                                             res1=""
                                  
                                 info_hex=res
