@@ -231,8 +231,8 @@ class encypthion_class:
                                                 res+="0"
                                                 res+=b
                                             else:
-                                                res+="11"
-                                                res+=b[1:]
+                                                res+="1"
+                                                res+=b
                                             res1=""
                                             
                                  
@@ -262,8 +262,8 @@ class encypthion_class:
                                                 res+="0"
                                                 res+=b
                                             else:
-                                                res+="11"
-                                                res+=b[1:]
+                                                res+="1"
+                                                res+=b
                                             res1=""
                                  
                                 info_hex=res
