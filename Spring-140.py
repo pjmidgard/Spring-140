@@ -205,18 +205,13 @@ class encypthion_class:
                                  
                                         if(string[i] in lower):
                                  
-                                            res+="1"*(lower.index(string[i])+1)
+                                            res+="0"*(lower.index(string[i])+1)
+                                            res+="1"
+                                           
+                                           
                                             
-                                            res1+="0"*(lower.index(string[i])+1)
                                             
-                                            long_res=len(res)
-                                            res=res[:long_res-1]
-                                            if len(res1)==1:
-                                                res+="10"
-                                            else:
-                                                res+="0"
-                                                
-                                            res1=""
+                                      
                                             
                                             
                                             
@@ -230,10 +225,10 @@ class encypthion_class:
                                             long_res=len(res1)
                                             long_res=long_res-1
                                             b=format(long_res,'03b')
-                                            if b=="000":
-                                                res+="0" 
+                                            if long_res<4:
+                                                res+="1" 
                                             else:
-                                                res+="1"
+                                                res+="0"
                                             res+=b
                                             res1=""
                                             
@@ -242,17 +237,13 @@ class encypthion_class:
                                  
                                         if(string[i] in lower):
                                  
-                                            res+="1"*(lower.index(string[i])+1)
-                                            
                                             res1+="0"*(lower.index(string[i])+1)
                                             
-                                            long_res=len(res)
-                                            res=res[:long_res-1]
-                                            if len(res1)==1:
-                                                res+="10"
-                                            else:
-                                                res+="0"
-                                                
+                                            long_res=len(res1)
+                                            long_res=long_res-1
+                                            b=format(long_res,'03b')
+                                        
+                                            res+=b
                                             res1=""
                                             
                                             
@@ -263,17 +254,13 @@ class encypthion_class:
                                  
                                             #res+="0"*(upper.index(string[i])+1)
                                             res1+="0"*(upper.index(string[i])+1)
-                                           
+                                            
                                             long_res=len(res1)
                                             long_res=long_res-1
                                             b=format(long_res,'03b')
-                                            
-                                            if b=="000":
-                                                res+="0" 
-                                            else:
-                                                res+="1"
+                                        
                                             res+=b
-                                            res1='"'
+                                            res1=""
                                  
                                 info_hex=res
 
