@@ -180,7 +180,7 @@ class encypthion_class:
                                 
                                 size_data3=size_data2
                                 
-                                size_data3="11111111"+size_data3
+                                
                                 
                                 long=len(size_data3)
                                 
@@ -188,44 +188,16 @@ class encypthion_class:
                                 number=int(size_data3,2)
                                 
                                 
-                                info_hex=hex(number)[2:]
+                                info_hex=oct(number)[2:]
                         
                                 string = info_hex
                                 
-                                #print(info_hex)
+
+                                lower="01234567"
                                 
-                             
-                                
-                                #111111110
-                                #11111110
-                                #1111110
-                                #111110
-                                #11110
-                                #1110
-                                #110
-                                #10
-                                #0000
-                                #0001
-                                #0010
-                                #0011
-                                #01100
-                                #01101
-                                #01110
-                                #01111
-                               
-                                
-                                
-                               
-                                
-                                
-                                
- 
-                                lower="abcdef01"
-                                upper="23456789"
  
                                 res=""
-                                res1=""
-                               
+                          
                                 for i in range(0,len(string)):
  
                                     if(i%2==0):
@@ -233,72 +205,23 @@ class encypthion_class:
                                         if(string[i] in lower):
                                  
                                  
-                                            res+="1"
+                                           
                                             res+="0"*(lower.index(string[i])+1)
                                             
                                            
-                                           
-                                            
-                                            
-                                      
-                                            
-                                            
-                                            
-                                 
-                                        else:
-                                            
-                                 
-                                            #res+="0"*(upper.index(string[i])+1)
-                                            res1+="0"*(upper.index(string[i])+1)
-                                            long_res=len(res1)
-                                            
-                                            long_res=long_res-1
-                                            b=format(long_res,'03b')
-                                          
-                                            if long_res<4:
-                                                res+="0"
-                                                res+=b 
-                                                
-                                            else:
-                                                res+="01"
-                                                res+=b
-                                               
-                                            res1=""
-                                            
-                                 
+
                                     else:
                                  
                                         if(string[i] in lower):
                                             
-                                            res+="1"
-                                 
-                                            res+="0"*(lower.index(string[i])+1)
-                                            
+                                            res+="1"*(lower.index(string[i])+1)
+                                    
                                            
                                             
                                             
                                             
                                  
-                                        else:
-                                            
-                                 
-                                            #res+="0"*(upper.index(string[i])+1)          
-                                            res1+="0"*(upper.index(string[i])+1)
-                                            long_res=len(res1)
-                                            
-                                            long_res=long_res-1
-                                            b=format(long_res,'03b')
-                                          
-                                            if long_res<4:
-                                                res+="0"
-                                                res+=b 
-                                                
-                                            else:
-                                                res+="01"
-                                                res+=b
-                                               
-                                            res1=""
-                                 
+           
                                 info_hex=res
 
                                 
@@ -341,8 +264,8 @@ class encypthion_class:
                                 
                              
                                 
-                                import paq
-                                jl= paq.compress(jl)
+                                #import paq
+                                #jl= paq.compress(jl)
                                 
                                     
                                 size_after=len(jl)
