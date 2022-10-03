@@ -54,7 +54,6 @@ class encypthion_class:
                     F=0
                     
                     
-
                     	 
                     nac=len(nameas)
                     
@@ -180,9 +179,7 @@ class encypthion_class:
                                 
                                 size_data3=size_data2
                                 
-                                size_data3=size_data3+"11111111"
-                                
-                                
+                                size_data3="11111111"+size_data3
                                 
                                 long=len(size_data3)
                                 
@@ -190,40 +187,39 @@ class encypthion_class:
                                 number=int(size_data3,2)
                                 
                                 
-                                info_hex=oct(number)[2:]
+                                info_hex=hex(number)[2:]
                         
                                 string = info_hex
                                 
-
-                                lower="01234567"
-                                
+                                #print(info_hex)
+ 
+                                lower="89abcdef"
+                                upper="01234567"
  
                                 res=""
-                          
+                                res1=""
+                               
                                 for i in range(0,len(string)):
  
-                                    if(i%2==0):
+                                    
                                  
                                         if(string[i] in lower):
                                  
                                  
-                                           
-                                            res+="0"*(lower.index(string[i])+1)
-                                            
-                                           
-
-                                    else:
-                                 
-                                        if(string[i] in lower):
                                             
                                             res+="1"*(lower.index(string[i])+1)
-                                    
-                                           
-                                            
-                                            
+                                            res+="0"
+                                      
+                                        else:
                                             
                                  
-           
+                                            res+="0"*(upper.index(string[i])+1)
+                                            res+="1"
+                                          
+                                 
+                                
+                                            
+                                           
                                 info_hex=res
 
                                 
@@ -463,10 +459,108 @@ class encypthion_class:
                                     elif size_data3[0:2]=="01":
                                         size_data3=size_data3[2:]
                                     elif size_data3[0:1]=="1":
-                                        size_data3=size_data3[1:]                                    
+                                        size_data3=size_data3[1:]
+
+
+
+
+                                    long=len(size_data3)
+                                    block=0
+                                    blocks1=9
+                                    blocks=0
+                                    ESA=""
+                                    ESA1=""
+                                    ESC=""
+                                    #lower="abcdef01"
+                                    #upper="23456789"
+
+                                    while block<long:
+                                        ES=size_data3[block:block+blocks1]
+                                        #print(ES)
+                                        
+                                        
+                                        if ES[0:9]=="111111110":
+                                            blocks=9
+                                            ESC="1111"
+                                            
+                                            
+                                        elif ES[0:8]=="11111110":
+                                            blocks=8
+                                            ESC="1110"
+
+                                        elif ES[0:7]=="1111110":
+                                            blocks=7
+                                            ESC="1101"
+
+                                       
+                                        elif ES[0:6]=="111110":
+                                            blocks=6
+                                            ESC="1100"
+                                            
+                                        elif ES[0:5]=="11110":
+                                            blocks=5
+                                            ESC="1011"
+
+                                        elif ES[0:4]=="1110":
+                                            blocks=4
+                                            ESC="1010"
+
+                                        elif ES[0:3]=="110":
+                                            blocks=3
+                                            ESC="1001"
+
+                                        elif ES[0:2]=="10":
+                                            blocks=2
+                                            ESC="1000"
+
+                                        if ES[0:9]=="000000001":
+                                            blocks=9
+                                            ESC="0111"
+                                            
+                                            
+                                        elif ES[0:8]=="00000001":
+                                            blocks=8
+                                            ESC="0110"
+
+                                        elif ES[0:7]=="0000001":
+                                            blocks=7
+                                            ESC="0101"
+
+                                       
+                                        elif ES[0:6]=="000001":
+                                            blocks=6
+                                            ESC="0100"
+                                            
+                                        elif ES[0:5]=="00001":
+                                            blocks=5
+                                            ESC="0011"
+
+                                        elif ES[0:4]=="0001":
+                                            blocks=4
+                                            ESC="0010"
+
+                                        elif ES[0:3]=="001":
+                                            blocks=3
+                                            ESC="0001"
+
+                                        elif ES[0:2]=="01":
+                                            blocks=2
+                                            ESC="0000"
+                                        #print(ESC)
+                                            
+                                        ESA=ESA+ESC
+                                        
+                                        
+                                        block+=blocks
+                                        #print(block)
+                                    
+
+                                    size_data3=ESA
+                                    
                                     
                                    
-                                        
+                                    size_data3=size_data3[8:]
+                                    #print(len(size_data3))
                                       
                                     n = int(size_data3, 2)
                                     
