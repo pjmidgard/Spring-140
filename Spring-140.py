@@ -180,6 +180,8 @@ class encypthion_class:
                                 
                                 size_data3=size_data2
                                 
+                                size_data3=size_data3+"11111111"
+                                
                                 
                                 
                                 long=len(size_data3)
@@ -264,8 +266,8 @@ class encypthion_class:
                                 
                              
                                 
-                                #import paq
-                                #jl= paq.compress(jl)
+                                import paq
+                                jl= paq.compress(jl)
                                 
                                     
                                 size_after=len(jl)
